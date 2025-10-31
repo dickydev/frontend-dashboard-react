@@ -12,7 +12,7 @@ export default function Login() {
     if (email.trim() && password.trim()) {
       localStorage.setItem("isLoggedIn", "true");
       localStorage.setItem("userEmail", email);
-      navigate("/dashboard/hr");
+      navigate("/hr");
     } else {
       alert("Please fill in both email and password.");
     }

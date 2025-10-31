@@ -17,8 +17,8 @@ export default function Navbar({ toggleSidebar }) {
   const title = pageTitles[location.pathname] || "ERP System";
 
   return (
-    <header className="h-16 flex items-center justify-between px-6 bg-white border-b sticky top-0 z-30">
-      <div className="flex items-center gap-4">
+    <header className="h-14 sm:h-16 flex items-center justify-between px-4 sm:px-6 bg-white border-b sticky top-0 z-30">
+      <div className="flex items-center gap-3 sm:gap-4">
         <button
           onClick={toggleSidebar}
           className="text-gray-600 hover:text-blue-600 focus:outline-none"
@@ -26,11 +26,13 @@ export default function Navbar({ toggleSidebar }) {
           <Menu size={22} />
         </button>
 
-        <h1 className="text-lg font-semibold text-gray-800">{title}</h1>
+        <h1 className="text-base sm:text-lg font-semibold text-gray-800 truncate">
+          {title}
+        </h1>
       </div>
 
-      <div className="flex items-center gap-4">
-        <div className="relative hidden md:block w-64">
+      <div className="flex items-center gap-3 sm:gap-4">
+        <div className="relative hidden md:block w-48 lg:w-64">
           <Search
             size={18}
             className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"
@@ -41,15 +43,22 @@ export default function Navbar({ toggleSidebar }) {
             className="border border-gray-300 rounded-lg pl-9 pr-3 py-2 w-full focus:ring-2 focus:ring-blue-500 outline-none text-sm"
           />
         </div>
+
+        <button className="md:hidden text-gray-600 hover:text-blue-600">
+          <Search size={20} />
+        </button>
+
         <button className="relative text-gray-600 hover:text-blue-600">
           <Bell size={20} />
           <span className="absolute -top-1 -right-1 w-2 h-2 bg-red-500 rounded-full"></span>
         </button>
-        <button className="text-gray-600 hover:text-blue-600">
+
+        <button className="hidden sm:block text-gray-600 hover:text-blue-600">
           <Settings size={20} />
         </button>
-        <div className="flex items-center gap-2 border-l pl-4">
-          <div className="flex flex-col items-end leading-tight">
+
+        <div className="flex items-center gap-2 border-l pl-3 sm:pl-4">
+          <div className="hidden sm:flex flex-col items-end leading-tight">
             <span className="text-sm font-medium text-gray-800">John Doe</span>
             <span className="text-xs text-gray-500">Administrator</span>
           </div>
