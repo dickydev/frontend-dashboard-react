@@ -1,0 +1,34 @@
+
+11:02:59 PM [vite] (client) Re-optimizing dependencies because lockfile has changed
+
+  VITE v7.1.12  ready in 1387 ms
+
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: use --host to expose
+  ➜  press h + enter to show help
+11:03:27 PM [vite] (client) hmr update /src/index.css
+11:03:29 PM [vite] (client) hmr update /src/index.css (x2)
+11:03:37 PM [vite] (client) hmr update /src/index.css (x3)
+11:04:06 PM [vite] (client) hmr update /src/index.css (x4)
+11:04:12 PM [vite] (client) hmr update /src/index.css (x5)
+11:04:13 PM [vite] (client) hmr update /src/index.css (x6)
+11:04:42 PM [vite] (client) hmr update /src/index.css (x7)
+11:04:44 PM [vite] (client) hmr update /src/index.css (x8)
+11:04:44 PM [vite] (client) hmr update /src/index.css (x9)
+11:05:13 PM [vite] (client) hmr update /src/App.jsx, /src/index.css
+11:05:14 PM [vite] (client) ✨ new dependencies optimized: react-router-dom
+11:05:14 PM [vite] (client) ✨ optimized dependencies changed. reloading
+11:05:23 PM [vite] (client) hmr update /src/index.css, /src/routes/AppRoutes.jsx
+11:05:29 PM [vite] (client) hmr update /src/index.css, /src/routes/AppRoutes.jsx (x2)
+11:07:39 PM [vite] (client) hmr update /src/index.css, /src/components/Layout/Layout.jsx
+11:07:39 PM [vite] (client) hmr update /src/index.css, /src/components/Layout/Layout.jsx (x2)
+11:07:40 PM [vite] (client) hmr update /src/index.css, /src/components/Layout/Layout.jsx (x3)
+11:07:49 PM [vite] (client) hmr update /src/index.css, /src/components/Layout/Navbar.jsx
+11:07:59 PM [vite] (client) hmr update /src/index.css, /src/components/Layout/Sidebar.jsx
+11:10:44 PM [vite] (client) hmr update /src/index.css, /src/components/Layout/Layout.jsx
+11:10:54 PM [vite] (client) hmr update /src/index.css, /src/components/Layout/Sidebar.jsx
+11:11:02 PM [vite] (client) hmr update /src/index.css, /src/components/Layout/Navbar.jsx
+11:11:39 PM [vite] (client) hmr update /src/index.css, /src/components/Layout/Sidebar.jsx
+11:11:45 PM [vite] (client) hmr update /src/index.css, /src/components/Layout/Sidebar.jsx (x2)
+11:11:47 PM [vite] (client) hmr update /src/index.css, /src/components/Layout/Sidebar.jsx (x3)
+11:11:51 PM [vite] (client) hmr update /src/index.css, /src/components/Layout/Sidebar.jsx (x4)
