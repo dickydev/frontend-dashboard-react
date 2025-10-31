@@ -1,4 +1,23 @@
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+
 export default function Login() {
+  const navigate = useNavigate();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (email.trim() && password.trim()) {
+      localStorage.setItem("isLoggedIn", "true");
+      localStorage.setItem("userEmail", email);
+
+      navigate("/hr");
+    } else {
+      alert("Please fill in both email and password.");
+    }
+  };
+
   return (
     <div className="flex h-screen items-center justify-center bg-linear-to-br from-blue-50 to-white">
       <div className="w-full max-w-md bg-white rounded-2xl shadow-lg p-8">
@@ -10,11 +29,13 @@ export default function Login() {
           <p className="text-gray-500 text-sm">Sign in to your ERP dashboard</p>
         </div>
 
-        <form>
+        <form onSubmit={handleSubmit}>
           <label className="block mb-3">
             <span className="text-gray-700 text-sm">Email Address</span>
             <input
               type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               className="mt-1 w-full border border-gray-300 rounded-lg p-2 focus:ring-2 focus:ring-blue-500 outline-none"
               placeholder="Enter your email"
             />
@@ -24,6 +45,8 @@ export default function Login() {
             <span className="text-gray-700 text-sm">Password</span>
             <input
               type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
               className="mt-1 w-full border border-gray-300 rounded-lg p-2 focus:ring-2 focus:ring-blue-500 outline-none"
               placeholder="Enter your password"
             />
