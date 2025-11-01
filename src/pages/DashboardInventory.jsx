@@ -10,6 +10,7 @@ import {
   Box,
 } from "lucide-react";
 import StatusBadge from "../components/Cards/StatusBadge";
+import Button from "../components/Forms/Button";
 
 export default function DashboardInventory() {
   const products = [
@@ -43,10 +44,12 @@ export default function DashboardInventory() {
           </p>
         </div>
 
-        <button className="bg-blue-600 text-white px-4 sm:px-5 py-2 rounded-lg hover:bg-blue-700 flex items-center justify-center gap-2 text-sm sm:text-base font-medium w-full sm:w-auto">
-          <Plus size={16} />
-          Add Product
-        </button>
+        <Button
+          label="Add Product"
+          icon={<Plus size={16} />}
+          color="blue"
+          onClick={() => console.log("Add Product clicked")}
+        />
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 mb-8">
@@ -113,10 +116,12 @@ export default function DashboardInventory() {
             />
           </div>
 
-          <button className="flex items-center justify-center gap-2 border border-gray-300 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-50 transition w-full sm:w-auto text-sm sm:text-base">
-            <Filter size={16} />
-            <span className="font-medium">Filter</span>
-          </button>
+          <Button
+            label="Filter"
+            icon={<Filter size={16} />}
+            outline
+            color="gray"
+          />
         </div>
 
         <div className="overflow-x-auto">

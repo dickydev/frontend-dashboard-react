@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import Button from "../components/Forms/Button";
 
 export default function Login() {
   const navigate = useNavigate();
@@ -58,12 +59,13 @@ export default function Login() {
             />
           </label>
 
-          <button
+          <Button
             type="submit"
-            className="w-full bg-blue-600 text-white font-medium py-2.5 sm:py-3 rounded-lg hover:bg-blue-700 transition text-sm sm:text-base"
-          >
-            Sign In
-          </button>
+            label="Sign In"
+            color="blue"
+            fullWidth
+            size="md"
+          />
         </form>
 
         <p className="text-center text-xs sm:text-sm text-gray-500 mt-6">

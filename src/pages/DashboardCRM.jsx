@@ -11,6 +11,7 @@ import {
   Building,
 } from "lucide-react";
 import StatusBadge from "../components/Cards/StatusBadge";
+import Button from "../components/Forms/Button";
 
 export default function DashboardCRM() {
   const customers = [
@@ -48,10 +49,13 @@ export default function DashboardCRM() {
           </p>
         </div>
 
-        <button className="bg-blue-600 text-white px-4 sm:px-5 py-2 rounded-lg hover:bg-blue-700 flex items-center justify-center gap-2 text-sm font-medium w-full sm:w-auto">
-          <Plus size={16} />
-          Add Customer
-        </button>
+        <Button
+          label="Add Customer"
+          icon={<Plus size={16} />}
+          color="blue"
+          size="md"
+          onClick={() => console.log("Add Customer clicked")}
+        />
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
@@ -116,10 +120,13 @@ export default function DashboardCRM() {
             />
           </div>
 
-          <button className="flex items-center justify-center gap-2 border border-gray-300 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-50 transition text-sm font-medium">
-            <Filter size={16} />
-            <span>Filter</span>
-          </button>
+          <Button
+            label="Filter"
+            icon={<Filter size={16} />}
+            outline
+            color="gray"
+            onClick={() => console.log("Filter clicked")}
+          />
         </div>
 
         <div className="overflow-x-auto">
