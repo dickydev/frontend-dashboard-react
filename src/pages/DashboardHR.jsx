@@ -10,6 +10,7 @@ import {
   Search,
   DollarSign,
 } from "lucide-react";
+import InfoCard from "../components/Cards/InfoCard";
 
 export default function DashboardHR() {
   const employees = [
@@ -52,45 +53,34 @@ export default function DashboardHR() {
       </h1>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
-        <div className="p-4 sm:p-5 bg-white rounded-xl shadow-sm flex items-center justify-between">
-          <div>
-            <p className="text-gray-500 text-sm">Total Employees</p>
-            <h2 className="text-xl sm:text-2xl font-bold text-gray-800">156</h2>
-          </div>
-          <div className="bg-blue-100 p-3 rounded-lg">
-            <Users className="h-6 w-6 text-blue-600" />
-          </div>
-        </div>
-
-        <div className="p-4 sm:p-5 bg-white rounded-xl shadow-sm flex items-center justify-between">
-          <div>
-            <p className="text-gray-500 text-sm">New Hires</p>
-            <h2 className="text-xl sm:text-2xl font-bold text-green-600">12</h2>
-          </div>
-          <div className="bg-green-100 p-3 rounded-lg">
-            <UserPlus className="h-6 w-6 text-green-600" />
-          </div>
-        </div>
-
-        <div className="p-4 sm:p-5 bg-white rounded-xl shadow-sm flex items-center justify-between">
-          <div>
-            <p className="text-gray-500 text-sm">On Leave</p>
-            <h2 className="text-xl sm:text-2xl font-bold text-yellow-600">8</h2>
-          </div>
-          <div className="bg-yellow-100 p-3 rounded-lg">
-            <Calendar className="h-6 w-6 text-yellow-600" />
-          </div>
-        </div>
-
-        <div className="p-4 sm:p-5 bg-white rounded-xl shadow-sm flex items-center justify-between">
-          <div>
-            <p className="text-gray-500 text-sm">Avg Performance</p>
-            <h2 className="text-xl sm:text-2xl font-bold text-blue-600">4.2</h2>
-          </div>
-          <div className="bg-purple-100 p-3 rounded-lg">
-            <Award className="h-6 w-6 text-purple-600" />
-          </div>
-        </div>
+        <InfoCard
+          label="Total Employees"
+          value="156"
+          icon={<Users className="h-6 w-6" />}
+          color="blue"
+          textColor="blue"
+        />
+        <InfoCard
+          label="New Hires"
+          value="12"
+          icon={<UserPlus className="h-6 w-6" />}
+          color="green"
+          textColor="green"
+        />
+        <InfoCard
+          label="On Leave"
+          value="8"
+          icon={<Calendar className="h-6 w-6" />}
+          color="yellow"
+          textColor="yellow"
+        />
+        <InfoCard
+          label="Avg Performance"
+          value="4.2"
+          icon={<Award className="h-6 w-6" />}
+          color="purple"
+          textColor="purple"
+        />
       </div>
 
       <div className="bg-white rounded-xl shadow-sm p-4 sm:p-6">
