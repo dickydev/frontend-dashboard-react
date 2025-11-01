@@ -4,13 +4,12 @@ import {
   AlertTriangle,
   TrendingUp,
   Boxes,
-  Search,
-  Filter,
   Plus,
   Box,
 } from "lucide-react";
 import StatusBadge from "../components/Cards/StatusBadge";
 import Button from "../components/Forms/Button";
+import SearchFilterBar from "../components/Shared/SearchFilterBar";
 
 export default function DashboardInventory() {
   const products = [
@@ -103,26 +102,10 @@ export default function DashboardInventory() {
       </div>
 
       <div className="bg-white rounded-xl shadow-sm p-4 sm:p-6">
-        <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 mb-6">
-          <div className="relative grow">
-            <Search
-              size={18}
-              className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"
-            />
-            <input
-              type="text"
-              placeholder="Search products..."
-              className="border border-gray-300 rounded-lg pl-9 pr-3 py-2 sm:h-10 w-full focus:ring-2 focus:ring-blue-500 outline-none text-sm sm:text-base"
-            />
-          </div>
-
-          <Button
-            label="Filter"
-            icon={<Filter size={16} />}
-            outline
-            color="gray"
-          />
-        </div>
+        <SearchFilterBar
+          placeholder="Search products..."
+          onFilter={() => console.log("Filter products clicked")}
+        />
 
         <div className="overflow-x-auto">
           <table className="w-full border-collapse text-left text-sm sm:text-base min-w-[700px]">

@@ -4,14 +4,13 @@ import {
   UserCheck,
   Plus,
   TrendingUp,
-  Search,
-  Filter,
   Mail,
   Phone,
   Building,
 } from "lucide-react";
 import StatusBadge from "../components/Cards/StatusBadge";
 import Button from "../components/Forms/Button";
+import SearchFilterBar from "../components/Shared/SearchFilterBar";
 
 export default function DashboardCRM() {
   const customers = [
@@ -107,27 +106,10 @@ export default function DashboardCRM() {
       </div>
 
       <div className="bg-white rounded-xl shadow-sm p-4 sm:p-6">
-        <div className="flex flex-col sm:flex-row sm:items-center gap-3 mb-6">
-          <div className="relative grow w-full">
-            <Search
-              size={18}
-              className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"
-            />
-            <input
-              type="text"
-              placeholder="Search customers..."
-              className="border border-gray-300 rounded-lg pl-9 pr-3 py-2 w-full focus:ring-2 focus:ring-blue-500 outline-none text-sm"
-            />
-          </div>
-
-          <Button
-            label="Filter"
-            icon={<Filter size={16} />}
-            outline
-            color="gray"
-            onClick={() => console.log("Filter clicked")}
-          />
-        </div>
+        <SearchFilterBar
+          placeholder="Search customers..."
+          onFilter={() => console.log("Filter customers clicked")}
+        />
 
         <div className="overflow-x-auto">
           <table className="w-full border-collapse text-left text-sm min-w-[700px]">

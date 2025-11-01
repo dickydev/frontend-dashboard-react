@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Button from "../components/Forms/Button";
+import Input from "../components/Forms/Input";
 
 export default function Login() {
   const navigate = useNavigate();
@@ -36,26 +37,24 @@ export default function Login() {
 
         <form onSubmit={handleSubmit} className="space-y-4">
           <label className="block">
-            <span className="text-gray-700 text-sm sm:text-base">
-              Email Address
-            </span>
-            <input
+            <Input
+              label="Email Address"
               type="email"
+              placeholder="Enter your email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="mt-1 w-full border border-gray-300 rounded-lg p-2.5 sm:p-3 text-sm sm:text-base focus:ring-2 focus:ring-blue-500 outline-none"
-              placeholder="Enter your email"
+              size="md"
             />
           </label>
 
           <label className="block">
-            <span className="text-gray-700 text-sm sm:text-base">Password</span>
-            <input
+            <Input
+              label="Password"
               type="password"
+              placeholder="Enter your password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className="mt-1 w-full border border-gray-300 rounded-lg p-2.5 sm:p-3 text-sm sm:text-base focus:ring-2 focus:ring-blue-500 outline-none"
-              placeholder="Enter your password"
+              size="md"
             />
           </label>
 
