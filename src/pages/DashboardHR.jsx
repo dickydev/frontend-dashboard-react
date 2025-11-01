@@ -6,12 +6,11 @@ import {
   Award,
   User,
   MapPin,
-  Filter,
-  Search,
   DollarSign,
 } from "lucide-react";
 import InfoCard from "../components/Cards/InfoCard";
 import StatusBadge from "../components/Cards/StatusBadge";
+import SearchFilterBar from "../components/Shared/SearchFilterBar";
 
 export default function DashboardHR() {
   const employees = [
@@ -85,24 +84,7 @@ export default function DashboardHR() {
       </div>
 
       <div className="bg-white rounded-xl shadow-sm p-4 sm:p-6">
-        <div className="flex flex-col sm:flex-row sm:items-center gap-3 mb-6">
-          <div className="relative grow w-full">
-            <Search
-              size={18}
-              className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"
-            />
-            <input
-              type="text"
-              placeholder="Search employees..."
-              className="border border-gray-300 rounded-lg pl-9 pr-3 py-2 w-full focus:ring-2 focus:ring-blue-500 outline-none text-sm"
-            />
-          </div>
-
-          <button className="flex items-center justify-center gap-2 border border-gray-300 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-50 transition text-sm font-medium">
-            <Filter size={16} />
-            <span>Filter</span>
-          </button>
-        </div>
+        <SearchFilterBar placeholder="Search employees..." />
 
         <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-5">
           {employees.map((emp, index) => (
