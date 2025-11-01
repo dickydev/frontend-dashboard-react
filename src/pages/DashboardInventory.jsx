@@ -9,6 +9,7 @@ import {
   Plus,
   Box,
 } from "lucide-react";
+import StatusBadge from "../components/Cards/StatusBadge";
 
 export default function DashboardInventory() {
   const products = [
@@ -150,15 +151,7 @@ export default function DashboardInventory() {
                     {p.price}
                   </td>
                   <td className="py-4 px-4">
-                    <span
-                      className={`px-3 py-1 rounded text-xs sm:text-sm font-medium ${
-                        p.status === "In Stock"
-                          ? "bg-green-100 text-green-700"
-                          : "bg-orange-100 text-orange-700"
-                      }`}
-                    >
-                      {p.status}
-                    </span>
+                    <StatusBadge status={p.status} />
                   </td>
                   <td className="py-4 px-4 text-right space-x-3">
                     <button className="text-blue-600 hover:underline font-medium text-sm sm:text-base">

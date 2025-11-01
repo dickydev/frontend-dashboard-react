@@ -10,6 +10,7 @@ import {
   Phone,
   Building,
 } from "lucide-react";
+import StatusBadge from "../components/Cards/StatusBadge";
 
 export default function DashboardCRM() {
   const customers = [
@@ -170,9 +171,7 @@ export default function DashboardCRM() {
                   </td>
 
                   <td className="py-4 px-4">
-                    <span className="text-green-700 bg-green-100 px-3 py-1 text-xs rounded font-medium">
-                      {c.status}
-                    </span>
+                    <StatusBadge status={c.status} />
                   </td>
 
                   <td className="py-4 px-4 text-gray-500 text-sm">

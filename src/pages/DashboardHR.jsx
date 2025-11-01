@@ -11,6 +11,7 @@ import {
   DollarSign,
 } from "lucide-react";
 import InfoCard from "../components/Cards/InfoCard";
+import StatusBadge from "../components/Cards/StatusBadge";
 
 export default function DashboardHR() {
   const employees = [
@@ -123,9 +124,7 @@ export default function DashboardHR() {
                     </p>
                   </div>
                 </div>
-                <p className="text-green-700 bg-green-100 px-3 py-1 text-[11px] sm:text-xs rounded font-medium">
-                  {emp.status}
-                </p>
+                <StatusBadge status={emp.status} />
               </div>
 
               <div className="space-y-1.5 sm:space-y-2 text-sm text-gray-700 mt-2">
