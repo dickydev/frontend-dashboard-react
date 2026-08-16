@@ -1,0 +1,18 @@
+{
+  "default_branch": "main",
+  "branches": [
+    "gh-pages",
+    "main",
+    "origin"
+  ],
+  "parent": {
+    "gh-pages": "main",
+    "main": null,
+    "origin": "main"
+  },
+  "order": [
+    "main",
+    "gh-pages",
+    "origin"
+  ]
+}
